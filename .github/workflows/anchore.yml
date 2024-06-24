@@ -2,6 +2,8 @@ name: Anchore
 on: [workflow_dispatch]
 jobs:
   anchore:
+    permissions:
+      security-events: write
     runs-on: ubuntu-latest
     steps:
     - uses: anchore/scan-action@v3
