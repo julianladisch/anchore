@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: anchore/scan-action@v3
+      id: scan
       with:
         image: "docker.io/folioci/mod-reading-room:1.0.0-SNAPSHOT.18"
         fail-build: false
