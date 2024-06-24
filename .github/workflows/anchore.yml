@@ -1,0 +1,9 @@
+name: Anchore
+on: [workflow_dispatch]
+jobs:
+  anchore:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: anchore/scan-action@v3
+      with:
+        image: "docker.io/folioci/mod-reading-room:1.0.0-SNAPSHOT.18"
